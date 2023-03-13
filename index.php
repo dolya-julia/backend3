@@ -62,7 +62,7 @@ catch(PDOException $e){
   exit();
 }
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name = ?");
+  $stmt = $db->prepare("INSERT INTO application SET email = ?");
   $stmt->execute([$_POST['email']]);
 }
 catch(PDOException $e){

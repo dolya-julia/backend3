@@ -1,6 +1,6 @@
 <html lang="ru">
 <head>
-    <title>First work</title>
+    <title>Task3</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css">
     

@@ -54,21 +54,15 @@ $db = new PDO('mysql:host=localhost;dbname=u53298', $user, $pass,
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name = ?");
-  $stmt->execute([$_POST['name']]);
-}
-catch(PDOException $e){
-  print('Error : ' . $e->getMessage());
-  exit();
-}
-try {
-  $stmt = $db->prepare("INSERT INTO application SET email = ?");
-  $stmt->execute([$_POST['email']]);
-}
-catch(PDOException $e){
-  print('Error : ' . $e->getMessage());
-  exit();
-}
+    $stmt = $db->prepare("INSERT INTO application (name, price) VALUES('{$_POST['name']}', '{$_POST['email']}')");
+    $stmt->execute([$_POST['name']]);
+  }
+  catch(PDOException $e){
+    print('Error : ' . $e->getMessage());
+    exit();
+  }
+
+
 //  stmt - это "дескриптор состояния".
  
 //  Именованные метки.

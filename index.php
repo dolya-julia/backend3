@@ -1,6 +1,4 @@
 <?php
-print_r($_POST);
-
 // Отправляем браузеру правильную кодировку,
 // файл index.php должен быть в кодировке UTF-8 без BOM.
 header('Content-Type: text/html; charset=UTF-8');
@@ -22,19 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 // Проверяем ошибки.
 $errors = FALSE;
-if (empty($_POST['fio'])) {
+if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
-if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-  print('Заполните email.<br/>');
-  $errors = TRUE;
-}
-if ( $_POST['check'] == ''){
-  print('Заполните checkbox.<br/>');
-  $errors = TRUE;
-}
-
 // if (!preg_match('/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})$/', $_POST['date']))
    
 // if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/', $_POST['year'])) {

@@ -29,7 +29,7 @@ if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
   $errors = TRUE;
 }
 if ( $_POST['check'] == ''){
-  print('Заполните имя.<br/>');
+  print('Заполните checkbox.<br/>');
   $errors = TRUE;
 }
 

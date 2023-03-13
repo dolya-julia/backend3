@@ -14,8 +14,8 @@
         <label>Дата рождения:<input type="date" name="date" value="2003-03-03"/></label><br/>
         <p>
           <label> Пол:
-            <input type="radio" checked="checked" name="radio-group-1" value="Значение1"/>Женский</label>
-          <label><input type="radio" name="radio-group-1" value="Значение2" />Мужской</label><br />
+            <input type="radio" checked="checked" name="gender" value="Значение1"/>Женский</label>
+          <label><input type="radio" name="gender" value="Значение2" />Мужской</label><br />
         </p>
         <p>
           Kоличество конечностей:<br/>

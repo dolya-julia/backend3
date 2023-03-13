@@ -24,6 +24,10 @@ if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
+if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+  print('Заполните email.<br/>');
+  $errors = TRUE;
+}
 // if (!preg_match('/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})$/', $_POST['date']))
    
 // if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/', $_POST['year'])) {

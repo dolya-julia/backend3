@@ -24,7 +24,7 @@ if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
-if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+if (!preg_match('/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/', $_POST['email'])){
   print('Заполните email.<br/>');
   $errors = TRUE;
 }

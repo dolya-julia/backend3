@@ -8,7 +8,7 @@
 <body>
     <div class="content">
     <h1><a id="forma"></a>Форма:</h1>
-      <form action="" method="POST">
+      <form action="index.php" method="POST">
         <label>Ваше имя:<input type="text" name="name"placeholder="Введите имя"/></label><br/>
         <label>Почта <input type="email" name="email" placeholder="Введите почту"/></label><br/>
         <label>Дата рождения:<input type="date" name="date" value="2003-03-03"/></label><br/>
@@ -46,8 +46,3 @@
     </div>
 </body>
 </html>
-
-
-<?php
-print_r($_POST);
-?>

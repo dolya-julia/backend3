@@ -24,6 +24,10 @@ if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
+if (empty($_POST['text'])) {
+  print('Заполните поле текста.<br/>');
+  $errors = TRUE;
+}
 if (!preg_match('/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/', $_POST['email'])){
   print('Заполните email.<br/>');
   $errors = TRUE;
@@ -54,7 +58,7 @@ $db = new PDO('mysql:host=localhost;dbname=u53298', $user, $pass,
 
 // Подготовленный запрос. Не именованные метки.
 try {
-    $stmt = $db->prepare("INSERT INTO application (name, email, gender, data, limbs) VALUES('{$_POST['name']}', '{$_POST['email']}', '{$_POST['gender']}', '{$_POST['date']}', '{$_POST['limbs']}')");
+    $stmt = $db->prepare("INSERT INTO application (name, email, gender, data, limbs, biog) VALUES('{$_POST['name']}', '{$_POST['email']}', '{$_POST['gender']}', '{$_POST['date']}', '{$_POST['limbs']}', '{$_POST['text']}')");
     $stmt->execute([$_POST['name']]);
   }
   catch(PDOException $e){

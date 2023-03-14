@@ -19,10 +19,10 @@
         </p>
         <p>
           Kоличество конечностей:<br/>
-          <label><input type="radio" checked="checked" name="radio-group-2" value="Значение1"/>2</label>
-          <label><input type="radio" name="radio-group-2" value="Значение3"/>4</label>
-          <label><input type="radio" name="radio-group-2" value="Значение4"/>6</label>
-          <label><input type="radio" name="radio-group-2" value="Значение5"/>8</label><br/>
+          <label><input type="radio" checked="checked" name="limbs" value="2"/>2</label>
+          <label><input type="radio" name="limbs" value="4"/>4</label>
+          <label><input type="radio" name="limbs" value="6"/>6</label>
+          <label><input type="radio" name="limbs" value="8"/>8</label><br/>
         </p>
         <p>
         <label>

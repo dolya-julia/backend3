@@ -27,10 +27,10 @@
         <p>
         <label>
           Cверхспособности:<br />
-          <select name="power[]" multiple="multiple">
-              <option value="Значение1">Бессмертие</option>
-              <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
-              <option value="Значение3" selected="selected">Левитация</option>
+          <select name="abilities[]" multiple="multiple">
+              <option value="Бессмертие">Бессмертие</option>
+              <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
+              <option value="Левитация" selected="selected">Левитация</option>
           </select>
         </label><br />
         </p>

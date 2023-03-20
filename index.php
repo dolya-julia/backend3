@@ -71,8 +71,7 @@ try {
     exit();
   }
 foreach($_POST['abilities'] as $ability){
-  $stmt = $db->prepare("INSERT INTO ability(AbName) VALUES('$ability')");
-  $stmt->execute(['$ability']);
+  $stmt = $db->query("INSERT INTO ability(AbName) VALUES('$ability')");
 }
 
 

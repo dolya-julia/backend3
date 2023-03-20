@@ -36,7 +36,7 @@
         </p>
         <p>
         <label>Биография:<br/>
-          <textarea name="text"></textarea>
+          <textarea name="biog"></textarea>
         </label><br />
         </p>
         <a id="bottom"></a><br/>

@@ -31,6 +31,9 @@
               <option value="Бессмертие">Бессмертие</option>
               <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
               <option value="Левитация" selected="selected">Левитация</option>
+              <option value="Левитация" selected="selected">Чтение мыслей</option>
+              <option value="Левитация" selected="selected">Путешествие во времени</option>
+              <option value="Левитация" selected="selected">Невидимость</option>
           </select>
         </label><br />
         </p>

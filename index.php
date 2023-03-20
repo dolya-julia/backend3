@@ -62,13 +62,14 @@ $db = new PDO('mysql:host=localhost;dbname=u53298', $user, $pass,
 
 // Подготовленный запрос. Не именованные метки.
 try {
-    $stmt = $db->prepare("INSERT INTO application (name, email, gender, data, limbs, biog) VALUES('{$_POST['name']}', '{$_POST['email']}', '{$_POST['gender']}', '{$_POST['date']}', '{$_POST['limbs']}', '{$_POST['text']}')");
-    $stmt->execute([$_POST['name']]);
+    $stmt = $db->prepare("INSERT INTO application (name, email, data, gender, limbs, biog) VALUES('{$_POST['name']}', '{$_POST['email']}', '{$_POST['date']}', '{$_POST['gender']}', '{$_POST['limbs']}','{$_POST['biog']}')");
+    $stmt->execute([$_POST['name'], $_POST['email'], $_POST['date'], $_POST['gender'], $_POST['limbs'], $_POST['biog']]);
   }
   catch(PDOException $e){
     print('Error : ' . $e->getMessage());
     exit();
   }
+
 
 
 //  stmt - это "дескриптор состояния".

@@ -70,7 +70,10 @@ try {
     print('Error : ' . $e->getMessage());
     exit();
   }
-
+foreach($_POST['abilities'] as $ability){
+  $stmt = $db->prepare("INSERT INTO ability(AbName) VALUES('$ability')");
+  $stmt->execute(['$ability']);
+}
 
 
 //  stmt - это "дескриптор состояния".

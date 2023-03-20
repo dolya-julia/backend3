@@ -24,7 +24,7 @@ if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
-if (empty($_POST['text'])) {
+if (empty($_POST['biog'])) {
   print('Заполните поле текста.<br/>');
   $errors = TRUE;
 }

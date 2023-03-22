@@ -6,6 +6,11 @@
     
 </head>
 <body>
+    <?php 
+      $stmt = $db->prepare("SELECT * FROM ability");
+      $stmt->execute();
+      $result = $stmt->fetchAll();
+    ?>
     <div class="content">
     <h1><a id="forma"></a>Форма:</h1>
       <form action="index.php" method="POST">
@@ -28,12 +33,9 @@
         <label>
           Cверхспособности:<br />
           <select name="abilities[]" multiple="multiple">
-              <option value="Бессмертие">Бессмертие</option>
-              <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
-              <option value="Левитация" selected="selected">Левитация</option>
-              <option value="Левитация" selected="selected">Чтение мыслей</option>
-              <option value="Левитация" selected="selected">Путешествие во времени</option>
-              <option value="Левитация" selected="selected">Невидимость</option>
+            <?php foreach($result as $res) { ?>
+              <option value="<?php echo $res['AbId']; ?>"><?php echo $res['AbName']; ?></option>
+            <?php } ?>
           </select>
         </label><br />
         </p>

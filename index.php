@@ -22,8 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 // Проверяем ошибки.
 $errors = FALSE;
-if (empty($_POST['name']))  {
+if (!preg_match( '/^([а-яё\s]+|[a-z\s]+)$/iu', $_POST['name'])){
   print('Заполните имя.<br/>');
+  $errors = TRUE;
+}
+if (!preg_match('/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/', $_POST['email'])){
+  print('Заполните email.<br/>');
+  $errors = TRUE;
+}
+if (empty($_POST['abilities'])) {
+  print('Выберите способность.<br/>');
   $errors = TRUE;
 }
 if (empty($_POST['biog'])) {
@@ -32,10 +40,6 @@ if (empty($_POST['biog'])) {
 }
 if (empty($_POST['check'])) {
   print('Заполните чекбокс.<br/>');
-  $errors = TRUE;
-}
-if (!preg_match('/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/', $_POST['email'])){
-  print('Заполните email.<br/>');
   $errors = TRUE;
 }
 if ($errors) {

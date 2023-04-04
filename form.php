@@ -49,5 +49,19 @@
         <p><input type="submit" name="send" value="Отправить"/></p>
       </form>
     </div>
+    <ol>
+		<li>
+			<h4>Вход в MariaBD</h4>
+			<img src="SignIn.PNG">
+		</li>
+        <li>
+			<h4>Описание таблиц</h4>
+			<img src="DescribeTable.PNG">
+		</li>
+        <li>
+			<h4>Содержание таблиц</h4>
+			<img src="SelectTable.PNG">
+		</li>
+    </ol>
 </body>
 </html>
